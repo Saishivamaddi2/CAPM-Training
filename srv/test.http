@@ -1,0 +1,73 @@
+###Get the service document
+http://localhost:4004/v2/odata/v4/catalogService
+###
+http://localhost:4004/odata/v4/catalogService/$metadata
+###
+http://localhost:4004/odata/v4/catalogService/EmployeeSet
+###
+http://localhost:4004/odata/v4/catalogService/EmployeeSet/02BD2137-0890-1EEA-A6C2-BB55C19787FB
+###
+http://localhost:4004/odata/v4/catalogService/EmployeeSet/$count
+###
+http://localhost:4004/odata/v4/catalogService/EmployeeSet?$top=3
+
+###
+http://localhost:4004/odata/v4/CatalogService/Products/74867AD200E41EDBA5D8B06B26EBA052?$expand=To_Items
+
+
+###post request 
+POST http://localhost:4004/odata/v4/CatalogService/EmployeeSet
+Content-Type: application/json
+ 
+{
+  "nameFirst": "Christiano",
+  "nameMiddle": "M",
+  "nameLast": "Ronaldo",
+  "nameInitials": null,
+  "sex": "M",
+  "language": "E",
+  "phoneNumber": "+918810504555",
+  "email": "chris.ronaldo@gmail.com",
+  "loginName": "CHRISRL",
+  "Currency_code": "USD",
+  "salaryAmount": 76395,
+  "accountNumber": "32109876",
+  "bankId": "66665555",
+  "bankName": "My Bank of London"
+}
+
+###
+
+Patch http://localhost:4004/odata/v4/CatalogService/EmployeeSet/05893b26-313a-4826-8079-f9988f7c34e9
+Content-Type: application/json
+
+{
+  "Currency_code": "INR",
+  "salaryAmount": 1234
+}
+###
+
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet/ede02a5b-b4b5-4e18-a020-98d1c8f3536d
+
+
+###
+http://localhost:4004/odata/v4/CatalogService/POs
+
+
+###
+http://localhost:4004/odata/v4/CatalogService/POs/74867AD200E41EDBA5D8B0C98DC30052
+
+
+###
+http://localhost:4004/odata/v4/CatalogService/POs/74867AD200E41EDBA5D8B0C98DC30052?$expand=Items
+
+
+
+###Get Single PO
+POST http://localhost:4004/odata/v4/catalogService/POs/74867AD200E41EDBA5D8B0C98DC30052/catalogService.boost
+Content-Type: application/json
+ 
+{}
+
+###
+http://localhost:4004/odata/v4/catalogService/largestOrder()
