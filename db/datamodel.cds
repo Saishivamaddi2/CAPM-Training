@@ -4,7 +4,7 @@ using { cuid, managed, temporal, Currency, Country } from '@sap/cds/common';
 using { anubhav.common } from './commons';
  
 context master {
-   
+   // business partner entity
     entity businesspartner {
         key NODE_KEY: common.Guid @title : '{i18n>PARTNER_KEY}';
         BP_ROLE: String(2);
