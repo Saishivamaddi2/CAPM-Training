@@ -6,12 +6,12 @@ using { anubhav.common } from './commons';
 context master {
    // business partner entity
     entity businesspartner {
-        key NODE_KEY: common.Guid @title : '{i18n>PARTNER_KEY}';
-        BP_ROLE: String(2);
-        EMAIL_ADDRESS: String(105);
-        PHONE_NUMBER: String(32);
-        FAX_NUMBER: String(32);
-        WEB_ADDRESS: String(44);
+        // key NODE_KEY: common.Guid @title : '{i18n>PARTNER_KEY}';
+        // BP_ROLE: String(2);
+        // EMAIL_ADDRESS: String(105);
+        // PHONE_NUMBER: String(32);
+        // FAX_NUMBER: String(32);
+        // WEB_ADDRESS: String(44);
         ADDRESS_GUID: Association to address;
         BP_ID: String(32);
         COMPANY_NAME: String(250) @title : '{i18n>COMPANY_NAME}';
